@@ -41,7 +41,7 @@
     <!-- End Header Section-->
 
 
-    <!-- Main Section-->
+    <!-- Main Section -->
     <section id="main">
         <div class="main container">
             <div class="motto">
@@ -52,10 +52,10 @@
             </div>
         </div>
     </section>
-    <!-- End Main Section-->
+    <!-- End Main Section -->
 
 
-    <!-- About Section-->
+    <!-- About Section -->
     <section id="about">
         <div class="about container">
             <div class="img-box">
