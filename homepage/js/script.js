@@ -5,22 +5,6 @@ $(window).on("load", function () {
 });
 /* End Loading */
 
-/* Find Language Script*/
-var language_address = [
-  "https://cs.wikipedia.org/wiki/PHP",
-  "https://cs.wikipedia.org/wiki/JQuery",
-  "https://cs.wikipedia.org/wiki/Hypertext_Markup_Language",
-  "https://cs.wikipedia.org/wiki/Kask%C3%A1dov%C3%A9_styly",
-  "https://cs.wikipedia.org/wiki/JavaScript",
-  "https://en.wikipedia.org/wiki/Sass_(stylesheet_language)",
-  "https://cs.wikipedia.org/wiki/MySQL",
-  "https://cs.wikipedia.org/wiki/Git",
-];
-function find(index) {
-  location.href = language_address[index];
-}
-/* End Find Language Script*/
-
 /* Timetable Script */
 var tt_odd = document.querySelector(".tt-odd", "tt-odd tr", "tt_odd tr td, th");
 var tt_even = document.querySelector(
@@ -72,37 +56,6 @@ function change(id_of_week) {
 }
 /* End Timetable Script */
 
-/* Find Project Script*/
-var project_address = [
-  "http://tesario.4fan.cz/homepage/other/cookie_clicker",
-  "http://tesario.4fan.cz/mainpage/other/prevody/",
-  "http://tesario.4fan.cz/index2.htm",
-  "http://tesario.4fan.cz/index.php",
-  "http://tesario.4fan.cz/bistro/",
-  "http://tesario.4fan.cz/mainpage/other/websecss/",
-  "http://tesario.4fan.cz/homepage/other/snake/",
-  "http://tesario.4fan.cz/mainpage/other/piskvorky/",
-  "http://tesario.4fan.cz/mainpage/other/knp/",
-  "http://tesario.4fan.cz/homepage/other/growlage/",
-  "http://tesario.4fan.cz/mainpage/other/koule/",
-];
-function find_project(index) {
-  location.href = project_address[index];
-}
-/* End Find Project Script*/
-
-/* Find School Project Script*/
-var school_project_address = [
-  "https://www.netacad.com/",
-  "http://tesario.4fan.cz/homepage/other/school/",
-  "http://tesario.4fan.cz/homepage/nodes/poznamky/",
-  "https://www.spst.cz/",
-];
-function find_school_project(index) {
-  location.href = school_project_address[index];
-}
-/* End Find School Project Script*/
-
 /* Click Hamburger Script */
 hamburger = document.querySelector(".header .hamburger");
 mobile_menu = document.querySelector(".header .menu-container");
@@ -123,6 +76,9 @@ menu_item.forEach((item) => {
 
 /* Scroll Script*/
 var scroll_deactive = false;
+header = document.querySelector(".header");
+
+// Když kliknu na nějakou položku v headeru -> na chvíli znepřístupní funkci changeSection()
 $(".nav-menu > li").click(() => {
   scroll_deactive = true;
   setTimeout(() => {
@@ -130,8 +86,13 @@ $(".nav-menu > li").click(() => {
   }, 500);
 });
 
-header = document.querySelector(".header");
 $("body").on("scroll", (e) => {
+  changeHeader(e); //změní header když scrollneme níže
+
+  changeSection(); // změní se položka v headeru, když nascroluji do patřičné section
+});
+
+function changeHeader(e) {
   var scroll_position = e.target.scrollTop;
   if (scroll_position > 200) {
     header.style.backgroundColor = "#1B212D";
@@ -140,6 +101,8 @@ $("body").on("scroll", (e) => {
     header.style.backgroundColor = "transparent";
     header.style.padding = "35px 30px";
   }
+}
+function changeSection() {
   if (!scroll_deactive) {
     var max = 200;
     var min = -200;
@@ -152,7 +115,7 @@ $("body").on("scroll", (e) => {
     else if ($("#other").offset().top < max && $("#other").offset().top > min)
       hr_margin(75);
   }
-});
+}
 /* End Scroll Script */
 
 /* HR margin script */
@@ -161,39 +124,3 @@ function hr_margin(margin) {
   hr.style.marginLeft = margin + "%";
 }
 /* End HR margin script */
-
-/* Evaluation Section */
-var random = Math.floor(Math.random() * 6);
-if (random > 3) {
-  var evaluation = document.querySelector("#evaluation");
-  window.addEventListener("load", () => {
-    evaluation.style.right = "0%";
-  });
-  var p = document.querySelector(".evaluation p");
-  var stars = document.querySelector(".evaluation .star-container");
-  function send(reaction) {
-    p.style.opacity = "0";
-    stars.style.opacity = "0";
-    setInterval(() => {
-      stars.style.display = "none";
-    }, 300);
-    setInterval(() => {
-      if (reaction == "heart") {
-        p.innerHTML = "Díky❤️";
-      } else if (reaction == "none") {
-        p.innerHTML = "Díky";
-      } else {
-        p.innerHTML = "Díky😢";
-      }
-      p.style.fontSize = "5rem";
-      p.style.width = "100%";
-    }, 300);
-    setInterval(() => {
-      p.style.opacity = "1";
-    }, 500);
-    setInterval(() => {
-      evaluation.style.right = "-100%";
-    }, 2000);
-  }
-}
-/* End Evaluation Section */

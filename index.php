@@ -65,30 +65,30 @@
                 <p>Jmenuji se Votěch Tesař a jsem studentem Střední průmyslové školy v Třebíči, obor informační technologie. Mezi mé oblíbené činnosti patří programování a tvorba webů, ze sportů je to např. fotbal, hokej nebo ping pong</p>
                 <h2>O co se zajímám?</h2>
                 <div class="language-items">
-                    <div class="item">
-                        <img src="homepage/img/Mainpage_icons/php.png" ondblclick="find(0)" alt="programming language">
-                    </div>
-                    <div class="item">
-                        <img src="homepage/img/Mainpage_icons/jquery.png" ondblclick="find(1)" alt="programming language">
-                    </div>
-                    <div class="item">
-                        <img src="homepage/img/Mainpage_icons/mysql.png" ondblclick="find(6)" alt="programming language">
-                    </div>
-                    <div class="item">
-                        <img src="homepage/img/Mainpage_icons/git.png" ondblclick="find(7)" alt="programming language">
-                    </div>
-                    <div class="item">
-                        <img src="homepage/img/Mainpage_icons/html.png" ondblclick="find(2)" alt="programming language">
-                    </div>
-                    <div class="item">
-                        <img src="homepage/img/Mainpage_icons/css.png" ondblclick="find(3)" alt="programming language">
-                    </div>
-                    <div class="item">
-                        <img src="homepage/img/Mainpage_icons/js.png" ondblclick="find(4)" alt="programming language">
-                    </div>
-                    <div class="item">
-                        <img src="homepage/img/Mainpage_icons/sass.png" ondblclick="find(5)" alt="programming language">
-                    </div>
+                    <a class="item" href="https://cs.wikipedia.org/wiki/PHP">
+                        <img src="homepage/img/mainpage_icons/php.png" alt="programming language">
+                    </a>
+                    <a class="item" href="https://cs.wikipedia.org/wiki/JQuery">
+                        <img src="homepage/img/mainpage_icons/jquery.png" alt="programming language">
+                    </a>
+                    <a class="item" href="https://cs.wikipedia.org/wiki/MySQL">
+                        <img src="homepage/img/mainpage_icons/mysql.png" alt="programming language">
+                    </a>
+                    <a class="item" href="https://cs.wikipedia.org/wiki/Git">
+                        <img src="homepage/img/mainpage_icons/git.png" alt="programming language">
+                    </a>
+                    <a class="item" href="https://cs.wikipedia.org/wiki/Hypertext_Markup_Language">
+                        <img src="homepage/img/mainpage_icons/html.png" alt="programming language">
+                    </a>
+                    <a class="item" href="https://cs.wikipedia.org/wiki/Kask%C3%A1dov%C3%A9_styly">
+                        <img src="homepage/img/mainpage_icons/css.png" alt="programming language">
+                    </a>
+                    <a class="item" href="https://cs.wikipedia.org/wiki/JavaScript">
+                        <img src="homepage/img/mainpage_icons/js.png" alt="programming language">
+                    </a>
+                    <a class="item" href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)">
+                        <img src="homepage/img/mainpage_icons/sass.png" alt="programming language">
+                    </a>
                 </div>
             </div>
         </div>
@@ -103,30 +103,30 @@
             <h1>Škola</h1>
             <div class="school-container">
                 <div class="school-projects">
-                    <div class="project">
-                        <div onclick="find_school_project(0)" class="img-box">
+                    <a class="project" href="https://www.netacad.com/">
+                        <div class="img-box">
                             <img src="homepage/img/other/network.png" alt="school-item">
                             <h2>Network Academy</h2>
                         </div>
-                    </div>
-                    <div class="project">
-                        <div onclick="find_school_project(1)" class="img-box">
+                    </a>
+                    <a class="project" href="http://tesario.4fan.cz/homepage/other/school/">
+                        <div class="img-box">
                             <img src="homepage/img/other/learning.png" alt="school-item">
                             <h2>Přehled učiva</h2>
                         </div>
-                    </div>
-                    <div class="project">
-                        <div onclick="find_school_project(2)" class="img-box">
+                    </a>
+                    <a class="project" href="http://tesario.4fan.cz/homepage/nodes/poznamky/">
+                        <div class="img-box">
                             <img src="homepage/img/other/note-editor.png" alt="school-item">
                             <h2>Editor poznámek</h2>
                         </div>
-                    </div>
-                    <div onclick="find_school_project(3)" class="project">
+                    </a>
+                    <a class="project" href="https://www.spst.cz/">
                         <div class="img-box">
                             <img class="spst" src="homepage/img/other/spst.png" alt="school-item">
                             <h2>SPŠT</h2>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="school-info">
                     <table onclick="change(false)" class="timetable tt-even">
@@ -313,73 +313,73 @@
         <div class="other container">
             <h1>Další Projekty</h1>
             <div class="project-container">
-                <div onclick="find_project(0)" class="other-item">
+                <a href="http://tesario.4fan.cz/homepage/other/cookie_clicker" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/cookie.png" alt="icon">
                     </div>
                     <h2>Cookie Clicker</h2>
-                </div>
-                <div onclick="find_project(1)" class="other-item">
+                </a>
+                <a href="http://tesario.4fan.cz/mainpage/other/prevody" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/math.png" alt="icon">
                     </div>
                     <h2>Převody jednotek</h2>
-                </div>
-                <div onclick="find_project(2)" class="other-item">
+                </a>
+                <a href="http://tesario.4fan.cz/WWW-doma/index.htm" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/internet.png" alt="icon">
                     </div>
                     <h2>Mainpage v1</h2>
-                </div>
-                <div onclick="find_project(3)" class="other-item">
+                </a>
+                <a href="http://tesario.4fan.cz/mainpage/index.php" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/internet.png" alt="icon">
                     </div>
                     <h2>Mainpage v2</h2>
-                </div>
-                <div onclick="find_project(4)" class="other-item">
+                </a>
+                <a href="http://tesario.4fan.cz/bistro" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/pizza.png" alt="icon">
                     </div>
                     <h2>Web pro BISTRO</h2>
-                </div>
-                <div onclick="find_project(5)" class="other-item">
+                </a>
+                <a href="http://tesario.4fan.cz/mainpage/other/websecss/" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/web.png" alt="icon">
                     </div>
                     <h2>Můj 1. web</h2>
-                </div>
-                <div onclick="find_project(6)" class="other-item">
+                </a>
+                <a href="http://tesario.4fan.cz/homepage/other/snake/" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/snake_icon.png" alt="icon">
                     </div>
                     <h2>Snake</h2>
-                </div>
-                <div onclick="find_project(7)" class="other-item">
+                </a>
+                <a href="http://tesario.4fan.cz/mainpage/other/knp/" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/tiktacktoe.png" alt="icon">
                     </div>
                     <h2>Piškvorky</h2>
-                </div>
+                </a>
 
-                <div onclick="find_project(8)" class="other-item">
+                <a href="http://tesario.4fan.cz/mainpage/other/knp/" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/rps.png" alt="icon">
                     </div>
                     <h2>Kámen, nůžky, papír</h2>
-                </div>
-                <div onclick="find_project(9)" class="other-item">
+                </a>
+                <a href="http://tesario.4fan.cz/homepage/other/growlage/" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/growlage.png" alt="icon">
                     </div>
                     <h2>Growlage</h2>
-                </div>
-                <div onclick="find_project(10)" class="other-item">
+                </a>
+                <a href="http://tesario.4fan.cz/mainpage/other/koule/" class="other-item">
                     <div class="img-box">
                         <img src="homepage/img/project-icons/ball.png" alt="icon">
                     </div>
                     <h2>Křišťálová koule</h2>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -410,43 +410,6 @@
         </span>
     </div>
     <!-- End Loading -->
-
-
-    <!-- Snowing -->
-    <div class="snow layer1"></div>
-    <div class="snow layer2"></div>
-    <div class="snow layer3"></div>
-    <div class="snow layer4"></div>
-    <div class="snow layer5"></div>
-    <div class="snow layer6"></div>
-    <!-- End Snowing -->
-
-
-    <!-- Evaluation Section -->
-    <section id="evaluation">
-        <div class="evaluation container">
-            <p>Byla předělána Mainpage, dejte nám vědět, jak se Vám líbí</p>
-            <div class="star-container">
-                <a onclick="send('heart')" class="star s1">
-                    ★
-                </a>
-                <a onclick="send('heart')" class="star s2">
-                    ★
-                </a>
-                <a onclick="send('none')" class="star s3">
-                    ★
-                </a>
-                <a onclick="send('cry')" class="star s4">
-                    ★
-                </a>
-                <a onclick="send('cry')" class="star s5">
-                    ★
-                </a>
-            </div>
-        </div>
-    </section>
-    <!-- End Evaluation Section -->
-
 
     <script src="homepage/js/script.js"></script>
 </body>
