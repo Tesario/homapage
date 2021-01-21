@@ -8,6 +8,7 @@
     <meta name="description" content="Mainpage - Autor: Vojtěch Tesař">
     <meta name="keywords" content="mainpage, Vojtěch Tesař">
     <meta name="author" content="Tesař Vojtěch">
+    <link rel="stylesheet" href="homepage/css/normalize.css">
     <link rel="stylesheet" href="homepage/css/style.css">
     <link rel="shortcut icon" href="homepage/img/other/code-logo.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,7 +16,7 @@
 </head>
 
 <body>
-    <!-- Header Section-->
+    <!-- Header Section -->
     <section id="header">
         <div class="header container">
             <div class="name">
@@ -106,26 +107,27 @@
                     <a class="project" href="https://www.netacad.com/">
                         <div class="img-box">
                             <img src="homepage/img/other/network.png" alt="school-item">
-                            <h2>Network Academy</h2>
                         </div>
+                        <h2>Network Academy</h2>
+
                     </a>
                     <a class="project" href="http://tesario.4fan.cz/homepage/other/school/">
                         <div class="img-box">
                             <img src="homepage/img/other/learning.png" alt="school-item">
-                            <h2>Přehled učiva</h2>
                         </div>
+                        <h2>Přehled učiva</h2>
                     </a>
                     <a class="project" href="http://tesario.4fan.cz/homepage/nodes/poznamky/">
                         <div class="img-box">
                             <img src="homepage/img/other/note-editor.png" alt="school-item">
-                            <h2>Editor poznámek</h2>
                         </div>
+                        <h2>Editor poznámek</h2>
                     </a>
                     <a class="project" href="https://www.spst.cz/">
                         <div class="img-box">
                             <img class="spst" src="homepage/img/other/spst.png" alt="school-item">
-                            <h2>SPŠT</h2>
                         </div>
+                        <h2>SPŠT</h2>
                     </a>
                 </div>
                 <div class="school-info">

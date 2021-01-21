@@ -96,10 +96,10 @@ function changeHeader(e) {
   var scroll_position = e.target.scrollTop;
   if (scroll_position > 200) {
     header.style.backgroundColor = "#1B212D";
-    header.style.padding = "10px 30px";
+    header.style.padding = "10px 0px";
   } else {
     header.style.backgroundColor = "transparent";
-    header.style.padding = "35px 30px";
+    header.style.padding = "35px 0px";
   }
 }
 function changeSection() {

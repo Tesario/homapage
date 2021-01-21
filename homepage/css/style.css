@@ -1,15 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap");
-* {
-  margin: 0px;
-  padding: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 html {
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
-  overflow-y: hidden;
+  overflow: hidden;
   height: 100vh;
 }
 
@@ -59,6 +52,7 @@ h2 {
 
 p {
   font-size: 1.5rem;
+  line-height: 1.7rem;
 }
 
 body::-webkit-scrollbar {
@@ -83,23 +77,12 @@ body::-webkit-scrollbar-thumb:hover {
   z-index: 1000;
   left: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 
-#header h1 {
-  font-size: 2.5rem;
-  color: white;
-}
-
-#header ul li {
-  color: white;
-  font-size: 5rem;
-  font-weight: 600;
-}
-
 #header .header {
-  padding: 35px 30px;
+  padding: 20px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,7 +99,16 @@ body::-webkit-scrollbar-thumb:hover {
   transition-property: padding, background-color;
 }
 
-#header .menu-container {
+#header .header .name {
+  margin-left: 5rem;
+}
+
+#header .header .name h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+#header .header .menu-container {
   position: absolute;
   left: 0px;
   top: -100vh;
@@ -136,29 +128,36 @@ body::-webkit-scrollbar-thumb:hover {
   transition: 0.4s ease top;
 }
 
-#header .menu-container.active {
+#header .header .menu-container.active {
   top: 0vh;
 }
 
-#header .nav-menu li {
+#header .header .menu-container li {
+  color: white;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+#header .header .menu-container .nav-menu li {
   list-style-type: none;
   cursor: pointer;
   margin: 10px 0px;
   text-align: center;
 }
 
-#header .nav-menu li a {
+#header .header .menu-container .nav-menu li a {
   -webkit-transition: 0.3s ease color;
   transition: 0.3s ease color;
   text-transform: uppercase;
 }
 
-#header .nav-menu li:hover a {
+#header .header .menu-container .nav-menu li a:hover {
   color: #bebebe;
 }
 
 #header .hamburger {
   position: relative;
+  margin-right: 5rem;
   z-index: 5;
   width: 50px;
   height: 50px;
@@ -192,8 +191,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: white;
 }
 
-#header .hamburger span::before,
-#header .hamburger span::after {
+#header .hamburger span::after, #header .hamburger span::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -238,11 +236,11 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 0 50px;
   margin: 0px auto;
 }
 
 #main .main .inscription {
+  margin-left: 15vw;
   font-size: 4.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -265,17 +263,30 @@ body::-webkit-scrollbar-thumb:hover {
   color: white;
 }
 
-#main .inscription:nth-child(2) {
+#main .main .inscription span {
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 105%;
+  height: calc(100% + 10px);
+  -webkit-animation: anim_span 1s ease forwards;
+          animation: anim_span 1s ease forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+#main .main .inscription:nth-child(2) span, #main .main .inscription:nth-child(2) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-#main .inscription:nth-child(3) {
+#main .main .inscription:nth-child(3) span, #main .main .inscription:nth-child(3) {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
 
-#main .inscription:nth-child(4) {
+#main .main .inscription:nth-child(4) span, #main .main .inscription:nth-child(4) {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
@@ -289,36 +300,6 @@ body::-webkit-scrollbar-thumb:hover {
 #main .main .img-box img {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
-}
-
-#main span {
-  background-color: black;
-  position: absolute;
-  top: 0;
-  left: 0px;
-  width: 105%;
-  height: 100%;
-  -webkit-animation: anim_span 1s ease forwards;
-          animation: anim_span 1s ease forwards;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-#main .inscription:nth-child(2) span {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-#main .inscription:nth-child(3) span {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-#main .inscription:nth-child(4) span {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
 }
 
 #main .main .img-box .repeat-logo {
@@ -346,7 +327,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 #about .about .info-box {
   text-align: center;
-  max-width: 700px;
   padding: 0px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -377,8 +357,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 #about .item {
   padding: 20px;
-  width: 170px;
-  height: 170px;
+  width: 100px;
+  height: 100px;
 }
 
 #about .item img {
@@ -399,7 +379,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #school h1,
-h2 {
+#school h2 {
   color: white;
 }
 
@@ -414,7 +394,7 @@ h2 {
   padding-top: 80px;
 }
 
-#school .school-container {
+#school .school .school-container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,28 +411,38 @@ h2 {
           flex-direction: column;
 }
 
-#school .school .project {
-  padding: 20px 0px;
+#school .school .school-container .school-projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  gap: 2rem;
+}
+
+#school .school .school-container .school-projects .project {
+  position: relative;
   cursor: pointer;
-  width: 330px;
-  height: 230px;
-}
-
-#school .school .project:hover img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-#school .school .project:hover .img-box {
-  -webkit-box-shadow: 0px 0px 15px 10px #4d4d4d;
-          box-shadow: 0px 0px 15px 10px #4d4d4d;
-}
-
-#school .project .img-box {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 200px;
   border-radius: 15px;
   overflow: hidden;
+  max-width: 40vw;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+#school .school .school-container .school-projects .project .img-box {
+  width: 100%;
+  height: 100%;
   position: relative;
   -webkit-box-shadow: 0px 0px 15px 0px #4d4d4d;
           box-shadow: 0px 0px 15px 0px #4d4d4d;
@@ -460,12 +450,12 @@ h2 {
   transition: 0.4s ease box-shadow;
 }
 
-#school .project .img-box img {
+#school .school .school-container .school-projects .project .img-box img {
   -webkit-transition: 0.4s ease transform;
   transition: 0.4s ease transform;
 }
 
-#school .project .img-box h2 {
+#school .school .school-container .school-projects .project h2 {
   color: black;
   position: absolute;
   bottom: 0;
@@ -476,12 +466,22 @@ h2 {
   background-color: white;
 }
 
-#school .school-info {
+#school .school .school-container .school-projects .project:hover .img-box {
+  -webkit-box-shadow: 0px 0px 15px 10px #4d4d4d;
+          box-shadow: 0px 0px 15px 10px #4d4d4d;
+}
+
+#school .school .school-container .school-projects .project:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#school .school .school-container .school-info {
   max-width: 950px;
   padding: 40px 15px;
 }
 
-#school .school-info table {
+#school .school .school-container .school-info table {
   border-collapse: separate;
   border-spacing: 4px;
   width: 100%;
@@ -489,7 +489,7 @@ h2 {
   table-layout: fixed;
 }
 
-#school .school-info .timetable {
+#school .school .school-container .school-info .timetable {
   cursor: pointer;
   -webkit-animation: anim_opacity;
           animation: anim_opacity;
@@ -499,26 +499,27 @@ h2 {
           animation: anim_opacity_back;
 }
 
-#school .school-info table th,
-#school .school-info table td {
+#school .school .school-container .school-info table th,
+#school .school .school-container .school-info table td {
   text-align: center;
   height: 45px;
   color: white;
   background-color: #323d50;
+  vertical-align: middle;
 }
 
-#school .school-info table tr:nth-child(even) td {
+#school .school .school-container .school-info table tr:nth-child(even) td {
   background-color: #2d3547;
 }
 
-#school .school-info .notes {
+#school .school .school-container .school-info .notes {
   font-size: 2.2rem;
   margin: 80px 0px;
   table-layout: auto;
 }
 
-#school .school-info .notes th,
-#school .school-info .notes td {
+#school .school .school-container .school-info .notes th,
+#school .school .school-container .school-info .notes td {
   padding: 5px 9px;
 }
 
@@ -538,7 +539,7 @@ h2 {
   padding: 100px 0;
 }
 
-#other .project-container {
+#other .other .project-container {
   display: -ms-grid;
   display: grid;
   justify-items: center;
@@ -546,13 +547,10 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
-  margin: 15px;
 }
 
-#other .project-container .other-item {
+#other .other .project-container .other-item {
   text-align: center;
-  padding: 30px 0px;
-  margin: 5px 0px;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -570,15 +568,60 @@ h2 {
           flex-direction: column;
   cursor: pointer;
   position: relative;
+  row-gap: 1rem;
 }
 
-#other .other-item h2,
-img {
+#other .other .project-container .other-item:nth-child(1) {
+  background-color: #21759b;
+}
+
+#other .other .project-container .other-item:nth-child(2) {
+  background-color: #42a2ba;
+}
+
+#other .other .project-container .other-item:nth-child(3) {
+  background-color: #0678bd;
+}
+
+#other .other .project-container .other-item:nth-child(4) {
+  background-color: #26c1f0;
+}
+
+#other .other .project-container .other-item:nth-child(5) {
+  background-color: #305c93;
+}
+
+#other .other .project-container .other-item:nth-child(6) {
+  background-color: #ed4b23;
+}
+
+#other .other .project-container .other-item:nth-child(7) {
+  background-color: #85bd3d;
+}
+
+#other .other .project-container .other-item:nth-child(8) {
+  background-color: #ffbb00;
+}
+
+#other .other .project-container .other-item:nth-child(9) {
+  background-color: #f48120;
+}
+
+#other .other .project-container .other-item:nth-child(10) {
+  background-color: #f16124;
+}
+
+#other .other .project-container .other-item:nth-child(11) {
+  background-color: #9b5c8f;
+}
+
+#other .other .project-container .other-item h2,
+#other .other .project-container .other-item img {
   -webkit-transition: 0.4s ease transform;
   transition: 0.4s ease transform;
 }
 
-#other .other .other-item::after {
+#other .other .project-container .other-item::after {
   content: "";
   position: absolute;
   top: 0px;
@@ -591,79 +634,31 @@ img {
   transition: 0.3s ease opacity;
 }
 
-#other .other .other-item:hover:after {
+#other .other .project-container .other-item:hover:after {
   opacity: 0;
 }
 
-#other .other .other-item:hover img,
-#other .other .other-item:hover h2 {
+#other .other .project-container .other-item:hover img,
+#other .other .project-container .other-item:hover h2 {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-#other .project-container .other-item h2 {
+#other .other .project-container .other-item h2 {
   font-size: 2.5rem;
-  margin-top: 10px;
+  margin-bottom: 3rem;
+  color: white;
 }
 
-#other .project-container .img-box {
+#other .other .project-container .img-box {
+  margin-top: 2rem;
   width: 80px;
   height: 80px;
 }
 
-#other .project-container .img-box img {
+#other .other .project-container .img-box img {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
-}
-
-#other .game,
-#other .other-item {
-  width: 60px;
-  height: 60px;
-}
-
-#other .project-container .other-item:nth-child(1) {
-  background-color: #21759b;
-}
-
-#other .project-container .other-item:nth-child(2) {
-  background-color: #42a2ba;
-}
-
-#other .project-container .other-item:nth-child(3) {
-  background-color: #0678bd;
-}
-
-#other .project-container .other-item:nth-child(4) {
-  background-color: #26c1f0;
-}
-
-#other .project-container .other-item:nth-child(5) {
-  background-color: #305c93;
-}
-
-#other .project-container .other-item:nth-child(6) {
-  background-color: #ed4b23;
-}
-
-#other .project-container .other-item:nth-child(7) {
-  background-color: #85bd3d;
-}
-
-#other .project-container .other-item:nth-child(8) {
-  background-color: #ffbb00;
-}
-
-#other .project-container .other-item:nth-child(9) {
-  background-color: #f48120;
-}
-
-#other .project-container .other-item:nth-child(10) {
-  background-color: #f16124;
-}
-
-#other .project-container .other-item:nth-child(11) {
-  background-color: #9b5c8f;
 }
 
 /* End Other Section */
@@ -773,9 +768,6 @@ img {
   min-height: -moz-fit-content;
   min-height: fit-content;
   background: linear-gradient(45deg, #131821 0%, #39455f 100%);
-}
-
-#footer .footer {
   padding: 20px 0px 10px 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -784,19 +776,19 @@ img {
   text-align: center;
 }
 
-#footer p {
+#footer .footer p {
   font-weight: 300;
   font-size: 1.3rem;
   color: white;
 }
 
-#footer p:first-child {
+#footer .footer p:first-child {
   width: 330px;
   font-weight: 500;
   font-size: 2rem;
 }
 
-#footer hr {
+#footer .footer hr {
   width: 90%;
   margin: 20px 0px;
 }
@@ -828,45 +820,19 @@ img {
 /* End Main Section */
 /* About Section */
 @media only screen and (min-width: 756px) {
+  #about .info-box {
+    width: 90%;
+  }
   #about .item {
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
   }
 }
 
 /* End About Section */
-/* School Section */
-@media only screen and (min-width: 756px) {
-  #school .school-projects {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  #school .project {
-    margin: 0px 15px;
-  }
-  #school .school .project {
-    width: 40%;
-    height: 280px;
-  }
-}
-
-/* End School Section */
 /* Other Section*/
 @media only screen and (min-width: 756px) {
-  #other .project-container {
+  #other .other .project-container {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     -ms-grid-columns: (1fr)[2];
@@ -874,13 +840,10 @@ img {
     -ms-grid-rows: (1fr)[7];
         grid-template-rows: repeat(7, 1fr);
   }
-  #other .other .other-item {
+  #other .other .project-container .other-item {
     margin: 5px 0px;
   }
-  #other .other .other-item h2 {
-    max-width: 80%;
-  }
-  #other .project-container .other-item:nth-child(1) {
+  #other .other .project-container .other-item:nth-child(1) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
@@ -888,7 +851,7 @@ img {
     -ms-grid-row-span: 1;
     grid-row: 1/2;
   }
-  #other .project-container .other-item:nth-child(2) {
+  #other .other .project-container .other-item:nth-child(2) {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
@@ -896,7 +859,7 @@ img {
     -ms-grid-row-span: 2;
     grid-row: 2/4;
   }
-  #other .project-container .other-item:nth-child(7) {
+  #other .other .project-container .other-item:nth-child(7) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
@@ -904,7 +867,7 @@ img {
     -ms-grid-row-span: 1;
     grid-row: 5/6;
   }
-  #other .project-container .other-item:nth-child(8) {
+  #other .other .project-container .other-item:nth-child(8) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
@@ -912,7 +875,7 @@ img {
     -ms-grid-row-span: 2;
     grid-row: 6/8;
   }
-  #other .project-container .other-item:nth-child(9) {
+  #other .other .project-container .other-item:nth-child(9) {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
@@ -920,13 +883,17 @@ img {
     -ms-grid-row-span: 2;
     grid-row: 7/9;
   }
+  #other .other .project-container .other-item h2 {
+    max-width: 80%;
+  }
 }
 
 /* End Other Section*/
 /* Footer Section */
 @media only screen and (min-width: 756px) {
   #footer p {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    line-height: 2rem;
   }
   #footer p:first-child {
     width: 530px;
@@ -937,19 +904,13 @@ img {
 /* End Footer Section */
 /* End Media Query For Tablet */
 /* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
-  body {
-    -ms-scroll-snap-type: y mandatory;
-        scroll-snap-type: y mandatory;
-  }
-}
-
 /* Header Section */
 @media only screen and (min-width: 1200px) {
-  #header h1 {
+  #header .header h1 {
     font-size: 3rem;
   }
-  #header .menu-container {
+  #header .header .menu-container {
+    margin-right: 3rem;
     position: relative;
     left: 0px;
     top: 0px;
@@ -963,7 +924,7 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #header .nav-menu {
+  #header .header .menu-container .nav-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -974,50 +935,51 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  #header .nav-menu li {
+  #header .header .menu-container .nav-menu li {
     padding: 0px 0px;
-    list-style-type: none;
     cursor: pointer;
     margin: 0px 0px;
     text-align: center;
     font-size: 3rem;
     width: 13vw;
   }
-  #header .nav-menu li a {
+  #header .header .menu-container .nav-menu li a {
     padding: 0px 0px;
   }
-  #header .hamburger {
-    display: none;
-  }
-  #header .hr-container {
+  #header .header .menu-container .hr-container {
     display: block;
     width: 100%;
   }
-  #header .hr-container hr {
+  #header .header .menu-container .hr-container hr {
     width: 25%;
     border: 2px solid white;
     background: white;
     border-radius: 5px;
+    margin: 0px;
     -webkit-transition: 0.4s ease margin;
     transition: 0.4s ease margin;
+  }
+  #header .header .hamburger {
+    display: none;
   }
 }
 
 /* End Header Section */
 /* Main Section */
 @media only screen and (min-width: 1200px) {
-  #main .motto .inscription {
+  #main .main .motto .inscription {
     font-size: 7rem;
   }
   #main .main .img-box {
     margin-left: 15px;
   }
-  #main .img-box img {
+  #main .main .img-box img {
     width: 70px;
     height: 70px;
     top: -10px;
   }
   #main .main .inscription {
+    margin-left: 4vw;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -1032,7 +994,12 @@ img {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding: 0px 100px;
+    padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   #about .about .img-box {
     display: -webkit-box;
@@ -1041,27 +1008,26 @@ img {
     width: 55vh;
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
-    margin: 0px auto;
   }
   #about .about .img-box img {
     -webkit-filter: drop-shadow(0px 70px 70px black);
             filter: drop-shadow(0px 70px 70px black);
   }
   #about .about .info-box {
-    max-width: 650px;
+    max-width: 750px;
     margin: 0px;
     padding: 0px;
-    margin: 0px auto;
   }
   #about .about .info-box p {
     font-size: 2rem;
+    line-height: 2.4rem;
   }
   #about .about .info-box h2 {
     font-size: 2.8rem;
   }
   #about .about .language-items .item {
-    width: 11vw;
-    height: 11vw;
+    width: 9vw;
+    height: 9vw;
     max-width: 150px;
     max-height: 150px;
   }
@@ -1070,7 +1036,11 @@ img {
 /* End About Section */
 /* School Section */
 @media only screen and (min-width: 1200px) {
-  #school .school-container {
+  #school .school h1 {
+    padding: 0px;
+    margin-top: 100px;
+  }
+  #school .school .school-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1079,15 +1049,21 @@ img {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  #school .school h1 {
-    padding: 0px;
-    margin-top: 100px;
-  }
-  #school .school-info {
+  #school .school .school-container .school-info {
     max-width: 45%;
     padding: 0px;
   }
-  #school .school-projects {
+  #school .school .school-container .school-info table tr td,
+  #school .school .school-container .school-info table tr th {
+    height: 55px;
+  }
+  #school .school .school-container .school-info .timetable {
+    font-size: 1.9rem;
+  }
+  #school .school .school-container .school-info .notes {
+    margin: 20px 0px 0px 0px;
+  }
+  #school .school .school-container .school-projects {
     max-width: 45%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1105,24 +1081,12 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #school .project {
+  #school .school .school-container .school-projects .project {
     padding: 0px;
     margin: 0px auto;
-  }
-  #school .school .project {
     min-width: 200px;
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
-  }
-  #school .school-info table tr td,
-  th {
-    height: 55px;
-  }
-  #school .school-info .timetable {
-    font-size: 1.9rem;
-  }
-  #school .school-info .notes {
-    margin: 20px 0px 0px 0px;
   }
 }
 
@@ -1131,31 +1095,30 @@ img {
 @media only screen and (min-width: 1200px) {
   #other .other {
     padding: 0px;
-    padding-top: 25px;
   }
   #other .other h1 {
     margin-top: 40px;
     padding: 0px;
   }
-  #other .project-container {
+  #other .other .project-container {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
     -ms-grid-rows: unset;
         grid-template-rows: unset;
     grid-auto-rows: 180px;
   }
-  #other .other .other-item h2 {
+  #other .other .project-container .other-item h2 {
     font-size: 2.2rem;
   }
-  #other .project-container .other-item:nth-child(1) {
+  #other .other .project-container .other-item:nth-child(1) {
     grid-column: unset;
     grid-row: unset;
   }
-  #other .project-container .other-item:nth-child(2) {
+  #other .other .project-container .other-item:nth-child(2) {
     grid-column: unset;
     grid-row: unset;
   }
-  #other .project-container .other-item:nth-child(5) {
+  #other .other .project-container .other-item:nth-child(5) {
     -ms-grid-column: 5;
     -ms-grid-column-span: 1;
     grid-column: 5/6;
@@ -1163,7 +1126,7 @@ img {
     -ms-grid-row-span: 2;
     grid-row: 1/3;
   }
-  #other .project-container .other-item:nth-child(7) {
+  #other .other .project-container .other-item:nth-child(7) {
     -ms-grid-column: 3;
     -ms-grid-column-span: 2;
     grid-column: 3/5;
@@ -1171,15 +1134,15 @@ img {
     -ms-grid-row-span: 1;
     grid-row: 2/3;
   }
-  #other .project-container .other-item:nth-child(8) {
+  #other .other .project-container .other-item:nth-child(8) {
     grid-column: unset;
     grid-row: unset;
   }
-  #other .project-container .other-item:nth-child(9) {
+  #other .other .project-container .other-item:nth-child(9) {
     grid-column: unset;
     grid-row: unset;
   }
-  #other .project-container .other-item:nth-child(10) {
+  #other .other .project-container .other-item:nth-child(10) {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
@@ -1187,7 +1150,7 @@ img {
     -ms-grid-row-span: 2;
     grid-row: 2/4;
   }
-  #other .project-container .other-item:nth-child(11) {
+  #other .other .project-container .other-item:nth-child(11) {
     -ms-grid-column: 4;
     -ms-grid-column-span: 2;
     grid-column: 4/6;
