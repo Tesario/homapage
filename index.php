@@ -80,6 +80,9 @@
                     <a class="item" href="https://cs.wikipedia.org/wiki/Git">
                         <img src="homepage/img/mainpage_icons/git.png" alt="programming language">
                     </a>
+                    <a class="item" href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)">
+                        <img src="homepage/img/mainpage_icons/bootstrap.png" alt="programming language">
+                    </a>
                     <a class="item" href="https://cs.wikipedia.org/wiki/Hypertext_Markup_Language">
                         <img src="homepage/img/mainpage_icons/html.png" alt="programming language">
                     </a>
