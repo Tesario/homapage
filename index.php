@@ -122,7 +122,7 @@
                         </div>
                         <h2>Přehled učiva</h2>
                     </a>
-                    <a class="project" href="http://tesario.4fan.cz/homepage/nodes/poznamky/">
+                    <a class="project" href="http://tesario.4fan.cz/homepage/other/notes">
                         <div class="img-box">
                             <img src="homepage/img/other/note-editor.png" alt="school-item">
                         </div>
