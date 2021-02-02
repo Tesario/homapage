@@ -124,3 +124,15 @@ function hr_margin(margin) {
   hr.style.marginLeft = margin + "%";
 }
 /* End HR margin script */
+
+/* Scroll Reveal */
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "10px",
+  duration: 2000,
+  reset: true,
+});
+// Header
+
+// About
+/* End Scroll Reveal */

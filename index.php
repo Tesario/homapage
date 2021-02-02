@@ -115,7 +115,7 @@
                         </div>
                         <h2>Network Academy</h2>
 
-                    </a>
+                    </a> netstat -nab
                     <a class="project" href="http://tesario.4fan.cz/homepage/other/school/">
                         <div class="img-box">
                             <img src="homepage/img/other/learning.png" alt="school-item">
@@ -418,6 +418,7 @@
     </div>
     <!-- End Loading -->
 
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="homepage/js/script.js"></script>
 </body>
 

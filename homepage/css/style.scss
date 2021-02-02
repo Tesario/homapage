@@ -307,12 +307,11 @@ body::-webkit-scrollbar-thumb:hover {
         .project {
           position: relative;
           cursor: pointer;
-          width: 90%;
           height: 200px;
           border-radius: 15px;
           overflow: hidden;
           max-width: 40vw;
-          flex: auto;
+          flex: 1 1 200px;
           transition: 0.4s ease box-shadow;
           .img-box {
             width: 100%;
@@ -799,7 +798,6 @@ body::-webkit-scrollbar-thumb:hover {
       }
 
       .school-projects {
-        max-width: 45%;
         display: flex;
         justify-content: center;
         align-items: center;
