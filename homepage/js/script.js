@@ -1,7 +1,8 @@
 /* Loading */
 $(window).on("load", function () {
   $("#loader").fadeOut("slow");
-  $("#main span").css("-webkit-animation-play-state", "running"); //spuštění animace po načtení stránky
+  $("#main .inscription span").css("-webkit-animation-play-state", "running"); //spuštění animace po načtení stránky
+  $("#main .inscription").css("-webkit-animation-play-state", "running");
 });
 /* End Loading */
 
@@ -86,14 +87,13 @@ $(".nav-menu > li").click(() => {
   }, 500);
 });
 
-$("body").on("scroll", (e) => {
-  changeHeader(e); //změní header když scrollneme níže
-
-  changeSection(); // změní se položka v headeru, když nascroluji do patřičné section
+$(window).on("scroll", () => {
+  changeHeader(window.scrollY); //změní header když scrollneme níže
+  changeSection(window.scrollY); // změní se položka v headeru, když nascroluji do patřičné section
 });
-
-function changeHeader(e) {
-  var scroll_position = e.target.scrollTop;
+console.log($("#about").offset().top);
+function changeHeader(scrollY) {
+  var scroll_position = scrollY;
   if (scroll_position > 200) {
     header.style.backgroundColor = "#1B212D";
     header.style.padding = "10px 0px";
@@ -102,17 +102,27 @@ function changeHeader(e) {
     header.style.padding = "35px 0px";
   }
 }
-function changeSection() {
+function changeSection(scrollY) {
   if (!scroll_deactive) {
-    var max = 200;
-    var min = -200;
-    if ($("#main").offset().top < max && $("#main").offset().top > min)
+    var space = 300;
+    var top = scrollY - space;
+    var bottom = scrollY + space;
+    if ($("#main").offset().top > top && $("#main").offset().top < bottom)
       hr_margin(0);
-    else if ($("#about").offset().top < max && $("#about").offset().top > min)
+    else if (
+      $("#about").offset().top > top &&
+      $("#about").offset().top < bottom
+    )
       hr_margin(25);
-    else if ($("#school").offset().top < max && $("#school").offset().top > min)
+    else if (
+      $("#school").offset().top > top &&
+      $("#school").offset().top < bottom
+    )
       hr_margin(50);
-    else if ($("#other").offset().top < max && $("#other").offset().top > min)
+    else if (
+      $("#other").offset().top > top &&
+      $("#other").offset().top < bottom
+    )
       hr_margin(75);
   }
 }
@@ -126,13 +136,53 @@ function hr_margin(margin) {
 /* End HR margin script */
 
 /* Scroll Reveal */
-const sr = ScrollReveal({
+sr = ScrollReveal({
   origin: "top",
   distance: "10px",
   duration: 2000,
   reset: true,
 });
+
+// All
+sr.reveal("section > div > h1", { delay: 100 });
+
 // Header
+sr.reveal("#header", { delay: 200 });
+
+// Main
+sr.reveal(".motto", { delay: 10, origin: "left" });
 
 // About
+sr.reveal(".about .img-box", { delay: 200, origin: "right" });
+sr.reveal(".info-box h1", { delay: 100 });
+sr.reveal(".info-box p", { delay: 200 });
+sr.reveal(".info-box h2", { delay: 300 });
+sr.reveal(".language-items a", { delay: 400, interval: 200 });
+
+// School
+sr.reveal(".project", {
+  delay: 200,
+  interval: 200,
+  origin: "left",
+});
+sr.reveal(".timetable", {
+  delay: 300,
+  origin: "right",
+});
+sr.reveal(".notes", {
+  delay: 400,
+  origin: "right",
+});
+
+// Other
+sr.reveal(".project-container a", {
+  delay: 100,
+  interval: 100,
+});
+
+// Footer
+sr.reveal(".footer > p", {
+  delay: 50,
+  origin: "bottom",
+});
 /* End Scroll Reveal */

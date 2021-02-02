@@ -2,14 +2,7 @@
 html {
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
-  height: 100vh;
-}
-
-body {
   scroll-behavior: smooth;
-  overflow-y: scroll;
-  height: 100vh;
 }
 
 a {
@@ -247,10 +240,10 @@ body::-webkit-scrollbar-thumb:hover {
   width: fit-content;
   position: relative;
   color: transparent;
-  -webkit-animation: anim_text_color 1s ease forwards;
-          animation: anim_text_color 1s ease forwards;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  -webkit-animation: anim_text_color 1.5s ease forwards;
+          animation: anim_text_color 1.5s ease forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,14 +423,14 @@ body::-webkit-scrollbar-thumb:hover {
 #school .school .school-container .school-projects .project {
   position: relative;
   cursor: pointer;
-  width: 90%;
   height: 200px;
-  border-radius: 15px;
-  overflow: hidden;
-  max-width: 40vw;
+  width: 90%;
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 40vw;
   -webkit-transition: 0.4s ease box-shadow;
   transition: 0.4s ease box-shadow;
 }
@@ -791,6 +784,7 @@ body::-webkit-scrollbar-thumb:hover {
 #footer .footer hr {
   width: 90%;
   margin: 20px 0px;
+  background-color: white;
 }
 
 /* End Footer Section */
@@ -1064,7 +1058,6 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 20px 0px 0px 0px;
   }
   #school .school .school-container .school-projects {
-    max-width: 45%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1080,6 +1073,7 @@ body::-webkit-scrollbar-thumb:hover {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    max-width: 45%;
   }
   #school .school .school-container .school-projects .project {
     padding: 0px;

@@ -114,8 +114,7 @@
                             <img src="homepage/img/other/network.png" alt="school-item">
                         </div>
                         <h2>Network Academy</h2>
-
-                    </a> netstat -nab
+                    </a>
                     <a class="project" href="http://tesario.4fan.cz/homepage/other/school/">
                         <div class="img-box">
                             <img src="homepage/img/other/learning.png" alt="school-item">

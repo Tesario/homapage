@@ -2,13 +2,7 @@
 html {
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
-  height: 100vh;
-}
-body {
   scroll-behavior: smooth;
-  overflow-y: scroll;
-  height: 100vh;
 }
 a {
   text-decoration: none;
@@ -182,8 +176,8 @@ body::-webkit-scrollbar-thumb:hover {
       width: fit-content;
       position: relative;
       color: transparent;
-      animation: anim_text_color 1s ease forwards;
-      animation-delay: 0.3s;
+      animation: anim_text_color 1.5s ease forwards;
+      animation-play-state: paused;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -308,10 +302,11 @@ body::-webkit-scrollbar-thumb:hover {
           position: relative;
           cursor: pointer;
           height: 200px;
+          width: 90%;
+          flex: auto;
           border-radius: 15px;
           overflow: hidden;
           max-width: 40vw;
-          flex: 1 1 200px;
           transition: 0.4s ease box-shadow;
           .img-box {
             width: 100%;
@@ -564,6 +559,7 @@ body::-webkit-scrollbar-thumb:hover {
   hr {
     width: 90%;
     margin: 20px 0px;
+    background-color: white;
   }
 }
 /* End Footer Section */
@@ -803,6 +799,7 @@ body::-webkit-scrollbar-thumb:hover {
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
+        max-width: 45%;
         .project {
           padding: 0px;
           margin: 0px auto;
