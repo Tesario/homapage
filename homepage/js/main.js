@@ -163,4 +163,16 @@ sr.reveal(".experiences-items .item", { interval: 50 });
 
 // Projects
 sr.reveal(".projects h1");
-sr.reveal(".carousel");
+sr.reveal(".projects__button-box");
+sr.reveal(".project-list");
+
+// Mixitup
+
+var mixer = mixitup(".project-list", {
+  selectors: {
+    target: ".mix",
+  },
+  animation: {
+    duration: 300,
+  },
+});
