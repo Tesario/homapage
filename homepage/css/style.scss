@@ -538,14 +538,9 @@ section {
         &__primary {
           flex-wrap: wrap;
         }
-
-        &__secondary {
-          padding-top: .5rem;
-        }
       }
 
-      &__primary,
-      &__secondary {
+      &__primary {
         display: flex;
         gap: .5rem;
       }
